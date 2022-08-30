@@ -75,7 +75,10 @@ public:
     void peek() {}
 
     // number of elements in stack
-    void count() {}
+    int count()
+    {
+        return (top + 1); // value at top is index of latest element
+    }
 
     // change element at (i)th position
     void change() {}
@@ -96,7 +99,8 @@ int main()
     Stack s; // object of Stack
     s.push(5);
     s.push(10);
-    s.pop(); // 1644
+    // s.pop();
+    cout << s.count();
     s.display();
 
     return 0;
