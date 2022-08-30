@@ -3,4 +3,5 @@
 .idea/
 cmake-build-debug/
 tempCodeRunnerFile.*
+build/
 test*
