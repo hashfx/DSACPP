@@ -112,12 +112,21 @@ int main()
     s.push(15);
     s.push(20);
     s.push(25);
-    // s.pop();
-    cout << s.count() << endl;
-    cout << s.peek(2) << endl;
-    s.change(0, 100);
-
+    cout << "Stack" << endl;
     s.display();
+
+    cout << "Popped: " << s.pop();
+    cout << endl << "Stack" << endl;
+    s.display();
+    
+    cout << "Count: " << s.count() << endl;
+    
+    cout << "Peek at 2: " << s.peek(2) << endl;
+    
+    s.change(0, 100);
+    cout << "Changed Stack: " << endl;
+    s.display();
+
 
     return 0;
 }
