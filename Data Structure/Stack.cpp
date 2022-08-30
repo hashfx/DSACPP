@@ -89,7 +89,9 @@ public:
     }
 
     // change element at (i)th position
-    void change() {}
+    void change(int index, int value) {  // `index` to change `value` at
+        arr[index] = value;  // update arr[index] to value
+    }
 
     // display al elements in stack
     void display()
@@ -107,8 +109,14 @@ int main()
     Stack s; // object of Stack
     s.push(5);
     s.push(10);
+    s.push(15);
+    s.push(20);
+    s.push(25);
     // s.pop();
-    cout << s.count();
+    cout << s.count() << endl;
+    cout << s.peek(2) << endl;
+    s.change(0, 100);
+
     s.display();
 
     return 0;
