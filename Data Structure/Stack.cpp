@@ -72,7 +72,15 @@ public:
     }
 
     // access the element at (i)th position
-    void peek() {}
+    int peek(int position) {
+        // check if Stack is empty
+        if(isEmpty()){
+            cout << "Stack UnderFlow" << endl;
+            return 0;
+        } else {
+            return arr[position];  // display value at particular index[position]
+        }
+    }
 
     // number of elements in stack
     int count()
