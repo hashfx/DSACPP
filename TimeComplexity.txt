@@ -1,0 +1,14 @@
+## Algorithm Analysis
+    Efficiency of an algorithm can be analyzed at two different stages, before implementation and after implementation. They are the following −
+
+        A Priori Analysis − This is a theoretical analysis of an algorithm. Efficiency of an algorithm is measured by assuming that all other factors, for example, processor speed, are constant and have no effect on the implementation.
+
+        A Posterior Analysis − This is an empirical analysis of an algorithm. The selected algorithm is implemented using programming language. This is then executed on target computer machine. In this analysis, actual statistics like running time and space required, are collected.
+        
+## Time Complexity: 
+    The Time Complexity is the number of operations (number of times a statement executes) an algorithm performs to complete its task (considering that each operation takes the same amount of time)
+
+## Space Complexity:
+    The space complexity of an algorithm or a computer program is the amount of memory space required to solve an instance of the computational problem as a function of characteristics of the input. It is the memory required by an algorithm to execute a program and produce output.
+
+    
