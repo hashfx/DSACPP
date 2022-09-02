@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define MAX 10
+#define MAX 100
 
 class Stack
 {
