@@ -22,7 +22,24 @@ public:
     }
 
     // elements are added from rear end
-    void enqueue() {}
+    void enqueue(int value)
+    {
+        if (isFull()) // check if queue is full
+        {
+            cout << "Queue is Full" << endl;
+            return;
+        }
+        else if(isEmpty())
+        {
+            // pointers need to have at same position if empty [-1 + 1 = 0 index]
+            rear = 0;  // rear pointing to entry
+            front = 0;  // front pointing to exit
+            arr[rear] = value;  // set rear to value
+        } else {  // when queue is neither full nor empty
+            rear++;  // increase rear to next position
+            arr[rear] = value;  // set value to current rear index in queue
+        }
+    }
 
     // elements are removed from front end
     void dequeue() {}
@@ -53,6 +70,12 @@ int main()
 {
     Queue q;
     cout << q.isEmpty();
+
+    q.enqueue(1);
+    q.enqueue(2);
+    q.enqueue(3);
+    q.enqueue(4);
+    q.enqueue(5);
 
     return 0;
 }
