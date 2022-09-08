@@ -42,7 +42,26 @@ public:
     }
 
     // elements are removed from front end
-    void dequeue() {}
+    int dequeue() {
+        int v;
+        // if Queue is Empty, it can't be dequeued
+        if(isEmpty()){
+            cout << "Queue is Empty" << endl;
+            return 0;
+        }else if(front == rear) {  // if queue have only one element
+            v = arr[front];  // store value of last element in a variable
+            arr[front] = 0;  // remove value at arr[front] and set to 0
+            // set pointers back to -1
+            rear = -1;
+            front = -1;
+            return v;
+        } else{  // when we have multiple values in queue
+            v = arr[front];  // store value of last element in a variable
+            arr[front] = 0;  // remove value at arr[front] and set to 0
+            front++;  // set front to next value
+            return v;
+        }
+    }
 
     // check if queue is full
     bool isFull()
@@ -69,13 +88,17 @@ public:
 int main()
 {
     Queue q;
-    cout << q.isEmpty();
+    cout << q.isEmpty() << endl;
 
     q.enqueue(1);
     q.enqueue(2);
     q.enqueue(3);
     q.enqueue(4);
     q.enqueue(5);
+
+    // cout << q.dequeue() << endl;
+    // cout << q.dequeue() << endl;
+    // cout << q.dequeue() << endl;
 
     return 0;
 }
