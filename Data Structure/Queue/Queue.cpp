@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define MAX 1000
+#define MAX 1
 class Queue
 {
 private:
@@ -82,9 +82,8 @@ public:
     }
 
     // total items in queue
-    void count() {
-        // count number of elements in Queue
-        
+    int count() {
+        return (rear - front + 1);
     }
 };
 
@@ -98,10 +97,14 @@ int main()
     q.enqueue(3);
     q.enqueue(4);
     q.enqueue(5);
+    
+    cout << q.count() << endl;
 
-    // cout << q.dequeue() << endl;
-    // cout << q.dequeue() << endl;
-    // cout << q.dequeue() << endl;
+    cout << q.dequeue() << endl;
+    cout << q.dequeue() << endl;
+    cout << q.dequeue() << endl;
+    
+    cout << q.count() << endl;
 
     return 0;
 }
