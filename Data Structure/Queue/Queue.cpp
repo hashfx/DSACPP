@@ -82,9 +82,7 @@ public:
     }
 
     // total items in queue
-    void count() {
-        
-    }
+    void count() {}
 };
 
 int main()
