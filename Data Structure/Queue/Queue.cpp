@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define MAX 1
+#define MAX 5
 class Queue
 {
 private:
@@ -74,7 +74,7 @@ public:
     // check if queue is full
     bool isFull()
     {
-        if (rear == sizeof(arr) - 1) // being pointer starting from -1; it would be 1 less than the array index (sizeof(arr)-1)
+        if (rear == (sizeof(arr)/sizeof(int)) - 1) // being pointer starting from -1; it would be 1 less than the array index (sizeof(arr)-1)
             return true;
         else
             return false;
