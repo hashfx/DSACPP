@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define MAX 1
+#define MAX 5
 
 /*
 Problem with Simple Queue:
@@ -19,7 +19,7 @@ Solution in Circular Queue:
 
 */
 
-class Queue
+class CircularQueue
 {
 private:
     int front; // removed from front end
@@ -28,7 +28,7 @@ private:
 
 public:
     // constructor
-    Queue()
+    CircularQueue()
     {
         // initialize front and rear to -1
         front = -1;
@@ -116,6 +116,20 @@ public:
 
 int main()
 {
-
+    CircularQueue q;
+    cout << q.isEmpty();
+    q.enqueue(1);
+    q.enqueue(2);
+    q.enqueue(3);
+    q.enqueue(4);
+    q.enqueue(5);
+    cout << q.count();
+    
+    q.dequeue();
+    q.dequeue();
+    q.dequeue();
+    q.dequeue();
+    q.dequeue();
+    cout << q.count();
     return 0;
 }
