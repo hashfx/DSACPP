@@ -92,7 +92,7 @@ public:
     // check if queue is full
     bool isFull()
     {
-        if (rear == sizeof(arr) - 1) // being pointer starting from -1; it would be 1 less than the array index (sizeof(arr)-1)
+        if ((rear+1)%(sizeof(arr)/sizeof(int)) == front) // being pointer starting from -1; it would be 1 less than the array index (sizeof(arr)-1)
             return true;
         else
             return false;
@@ -117,19 +117,17 @@ public:
 int main()
 {
     CircularQueue q;
-    cout << q.isEmpty();
     q.enqueue(1);
-    q.enqueue(2);
-    q.enqueue(3);
-    q.enqueue(4);
-    q.enqueue(5);
+    q.enqueue(1);
+    q.enqueue(1);
+    q.enqueue(1);
+    cout << q.isFull();
+    
     cout << q.count();
     
     q.dequeue();
     q.dequeue();
-    q.dequeue();
-    q.dequeue();
-    q.dequeue();
+    // q.dequeue();
     cout << q.count();
     return 0;
 }
