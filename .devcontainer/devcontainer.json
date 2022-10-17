@@ -19,7 +19,8 @@
 				"ms-vscode.cpptools",
 				"ms-vscode.cmake-tools",
 				"formulahendry.code-runner",
-				"eamodio.gitlens"
+				"eamodio.gitlens",
+				"ms-vscode.cpptools-extension-pack"
 			]
 		}
 	},
