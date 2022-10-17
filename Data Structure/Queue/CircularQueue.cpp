@@ -141,7 +141,7 @@ int main()
     cout << "\nCount: " << q.count();
 
     cout << q.dequeue();
-    cout << q.dequeue();
+    q.enqueue(8);  // appends to index[0]
 
     cout << "\nCount: " << q.count() << endl;
 
