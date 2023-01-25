@@ -13,3 +13,4 @@ vscode:
     - ms-vscode.cmake-tools
     - webfreak.debug
     - formulahendry.code-runner
+    - llvm-vs-code-extensions.vscode-clangd
