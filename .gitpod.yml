@@ -1,0 +1,15 @@
+
+tasks:
+- before: |
+    sudo apt -y install cmake
+    cmake -S. -Bbuild -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+    cmake --build build --target all 
+
+vscode:
+  extensions:
+    - twxs.cmake
+    # - ms-vscode.cpptools
+    # - ms-vscode.cpptools-extension-pack
+    - ms-vscode.cmake-tools
+    - webfreak.debug
+    - formulahendry.code-runner
