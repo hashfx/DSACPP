@@ -1,6 +1,6 @@
 #include<iostream>
 #include<fstream> // used for writing in files
-#FIXME: error in input through open()
+// #FIXME: error in input through open()
 /*
 Classes inside <fstream>:
     fstream : Input/output file stream class (class )
