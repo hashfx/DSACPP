@@ -30,10 +30,11 @@ void merge(int arr[], int leftArray, int midPoint, int rightArray) {
   // init pointers to keep track of sub array indices
   int i = leftArray;    // starting index for left sub array
   int j = midPoint + 1; // starting index for right sub array
-  int k = 1;            // starting index for temporary sub array
+  int k = leftArray;    // starting index for temporary sub array
 
   // temporary array
-  int temp[sizeof(arr)];
+  int size = (rightArray - 1) + 1;
+  int temp[size];
 
   // keep iteration bounded by index
   // i iterate from leftmost index to mid point of left sub array
@@ -60,7 +61,7 @@ void merge(int arr[], int leftArray, int midPoint, int rightArray) {
     j++;
     k++;
   }
-  for (int c = 0; c < sizeof(arr); c++) {
+  for (int c = leftArray; c <= rightArray; c++) {
     arr[c] = temp[c];
   }
 }
@@ -97,11 +98,11 @@ int main() {
   }
 
   // call mergeSort() on input_array
-  mergeSort(input_arr, 0, input_arr[n - 1]);
+  mergeSort(input_arr, 0, (n - 1));
 
   // output array with sorted elements
   for (int i = 0; i < n; i++) {
-    cout << input_arr[i];
+    cout << input_arr[i] << " ";
   }
   return 0;
 }
