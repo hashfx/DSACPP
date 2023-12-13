@@ -2,6 +2,15 @@
 Heap Sort:
     comparison-based sorting algorithm, uses a binary heap data structure
     works by building a max heap and repeatedly extracting the maximum element
+
+Algorithm:
+Build a max heap:
+    a. start from the last non-leaf node and heapify each node until the root.
+    b. heapify: Compare the root with its left and right children, swap if needed, and recursively heapify.
+4. Extract elements from the heap:
+    a. swap the root (maximum element) with the last element.
+    b. reduce the heap size and heapify the root.
+    c. repeat until the heap is empty.
     
 Output Parameters:
     [In] size of array [n]
