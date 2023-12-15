@@ -27,7 +27,7 @@ string postfixToPrefix(string postfix) {
 
 int main() {
   string infixExpression;
-  cout << "enter an infix expression: ";
+  cout << "enter a postfix expression: ";
   getline(cin, infixExpression);
 
   string postfixToPrefixExpression = postfixToPrefix(postfixExpression);

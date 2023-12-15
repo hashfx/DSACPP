@@ -28,9 +28,9 @@ string prefixToPostfix(string prefix) {
 }
 
 int main() {
-  string infixExpression;
-  cout << "enter an infix expression: ";
-  getline(cin, infixExpression);
+  string prefixExpression;
+  cout << "enter a prefix expression: ";
+  getline(cin, prefixExpression);
 
   string prefixToPostfixExpression = prefixToPostfix(prefixExpression);
   cout << "prefix to postfix expression: " << prefixToPostfixExpression << endl;
